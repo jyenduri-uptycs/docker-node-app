@@ -1,4 +1,6 @@
 # https://nodejs.org/de/docs/guides/nodejs-docker-webapp/
+# node-docker-app.us-east-2.elasticbeanstalk.com
+# https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/single-container-docker-configuration.html#create_deploy_docker_image_dockerrun
 FROM node:8
 
 # Create app directory

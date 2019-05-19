@@ -1,0 +1,70 @@
+What is a Virtual Machine?
+
+Virtualization is the technique of importing a Guest operating system on top of a Host operating system. This technique was a revelation at the beginning because it allowed developers to run multiple operating systems in different virtual machines all running on the same host. This eliminated the need for extra hardware resource.
+
+Check Out This: Top Technical Skills to Master in 2018 | Edureka
+
+The advantages of Virtual Machines or Virtualization are:
+
+    Multiple operating systems can run on the same machine
+    Maintenance and Recovery were easy in case of failure conditions
+    The total cost of ownership was also less due to the reduced need for infrastructure
+
+In the diagram , you can see there is a host operating system on which there are 3 guest operating systems running which is nothing but the virtual machines.
+
+Disadvantages of Virtual Machine
+
+    Running multiple Virtual Machines leads to unstable performance because of the guest OS running on top of the host OS, which will have its own kernel and set of libraries and dependencies. This takes up a large chunk of system resources, i.e. hard disk, processor and especially RAM.
+    Hypervisors are not as efficient as the host operating system
+    Boot up process is long and takes time
+
+These drawbacks led to the emergence of a new technique called Containerization. Now let me tell you about Containerization.
+
+What is Containerization?
+
+    Containerization is the technique of bringing virtualization to the operating system level
+    It brings abstraction to the operating system and also is also a type of Virtualization
+    Containerization is more efficient because there is no guest OS here and utilizes a host’s operating system, share relevant libraries & resources as and when needed, unlike virtual machines.
+    Application specific binaries and libraries of containers run on the host kernel, which makes processing and execution very fast.
+    They are lightweight and faster than Virtual Machines.
+
+What is Docker?
+
+Docker is a containerization platform that packages your application and all its dependencies together in the form of Containers to ensure that your application works seamlessly in any environment.
+
+    Each application will run on a separate container and will have its own set of libraries and dependencies.
+    It also ensures that there is process level isolation, meaning each application is independent of other applications, giving developers surety that they can build applications that will not interfere with one another.
+
+Though Docker containers are sometimes referred to as ‘light-weight VMs’, they are not VMs (virtual machines). Both serve different purposes, and hence one cannot replace the other. Their underlying architecture is what differentiates Docker from Virtual machines. While VMs are based on server virtualization technology, Docker uses container virtualization.
+
+Let’s see what are the Major differences between Docker and Virtual Machines
+
+Major differences between Docker and Virtual machines
+
+OS Support
+
+    The basic architecture of Docker containers and Virtual machines differ in their OS support. Containers are hosted in a single physical server with a host OS, which is shared among them.
+    Virtual machines, on the other hand, have a host OS and individual guest OS inside each VM. Irrespective of the host OS, the guest OS can be anything – either Linux or Windows.
+    Docker containers are suited for situations where you want to run multiple applications over a single OS kernel. But if you have applications or services that need to run on different OS flavors, VMs are required.
+    Sharing the host OS between the containers make them very light and helps them to boot up in just a few seconds. Hence, the overhead to manage the container system is very low compared to VMs.
+
+Security
+
+    In Docker, since the host kernel is shared among the containers, the container technology has access to the kernel subsystems. As a result, a single vulnerable application can hack the entire host server.
+    Providing root access to applications and running them with superuser privileges, is therefore not recommended in Docker containers because of the security reasons.
+    On the other hand, VMs are unique instances with their own kernel and security features. They can, therefore, run applications that need more privilege and security.
+    At Bobcares, we implement additional security measures such as SELinux and AppArmor in Docker to secure the containers and to prevent them from cracking each other or the host kernel.
+
+Portability
+
+    Docker containers are self-contained packages that can run the required application. Since they do not have a separate guest OS, they can be easily ported across different platforms.
+    The containers can be started and stopped in a matter of a few seconds, compared to VMs, due to their light-weight architecture. This makes it easier to deploy Docker containers quickly in servers.
+    VMs, on the other hand, are isolated server instances with their own OS. They cannot be ported across multiple platforms without incurring compatibility issues.
+    For development purposes where the applications have to be developed and tested in different platforms, Docker containers are thus, the ideal choice.
+
+Performance
+
+    Docker and Virtual machines are intended for different purposes, so it’s not fair to measure their performance equally. But their light-weight architecture makes Docker containers less resource-intensive than the virtual machines.
+    As a result, containers can start up very fast compared to VM, as the latter has to load an entire OS to start. Resource usage also varies between the two.
+    In containers, the resource usage such as CPU, memory, I/O, etc. varies with the load or traffic in it. Unlike the case of VMs, there is no need to allocate resources permanently to containers.
+    Scaling up and duplicating the containers is also an easy task compared to that of VMs, as there is no need to install an operating system in them.
